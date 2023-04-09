@@ -4,15 +4,15 @@
 
 bool startFlag; // 稼働状態 false:停止 / true:起動
 char startType; // 稼働タイプ
-int  onTime;    // ソレノイドのON時間
-int  offTime;   // ソレノイドのOFF時間
+int  onTime;    // ソレノイドのON時間[ms]
+int  offTime;   // ソレノイドのOFF時間[ms]
 
 void setup() {
 
   startFlag = false;        // 停止に指定
   startType = MOVE_SINGLE;  // 単発に指定
 
-  onTime  = 1000;
+  onTime  = 1000; // 初期値は1000[ms]
   offTime = 1000;
 
   pinMode( 13, OUTPUT);
@@ -21,6 +21,7 @@ void setup() {
   digitalWrite(  4, LOW);
 
   Serial.begin( 9600 );
+  Serial.println("例外処理など入れてないため，コマンドを間違えないように注意してください");
 }
 
 void loop() {
@@ -34,12 +35,13 @@ void loop() {
     
     // ソレノイドのON時間を指定するコマンド受信時
     if( dt.indexOf("on") == 0 ){
-      String num_s = dt.substring( 3, dt.length());
-      
+      String onTime_s = dt.substring( 3, dt.length());
+      onTime = onTime_s.toInt();
     }
     // ソレノイドのOFF時間を指定するコマンド受信時
     else if( dt.indexOf("off") == 0 ){
-      String num_s = dt.substring( 4, dt.length());
+      String offTime_s = dt.substring( 4, dt.length());
+      offTime = offTime_s.toInt();
     }
     // 連続稼働コマンド受信時
     else if( dt.compareTo("continue") == 0 ){
@@ -59,8 +61,20 @@ void loop() {
     }
   }
 
-  digitalWrite( 4, LOW);
-  delay(40);
-  digitalWrite( 4, HIGH);
-  delay(40);
+  // #################################
+  // ####---- ソレノイド稼働処理 ----####
+  
+  // startFlagがtrueならばソレノイドを稼働する
+  // startTypeが単発稼働ならばstartFlagをfalseにする
+  if( startFlag == true ){
+    
+    digitalWrite( 4, HIGH);
+    delay(onTime);
+    digitalWrite( 4, LOW);
+    delay(offTime); 
+    
+    if( startType != MOVE_CONTINUE ){
+      startFlag = false;
+    }
+  }
 }
