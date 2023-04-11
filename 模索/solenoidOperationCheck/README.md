@@ -18,3 +18,6 @@
 ## 回路図
 
 ## 結果  
+ON/OFF時間ともに，40[ms]が最小時間となった． 
+動作動画↓   
+[Twitter動画埋め込めないので，リンク貼っときます](https://twitter.com/TetoraTechLab/status/1645044216073191426)
