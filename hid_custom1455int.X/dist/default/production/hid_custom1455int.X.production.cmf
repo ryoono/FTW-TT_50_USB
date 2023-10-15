@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$D:\Temp\sif8.o
+$D:\Temp\s1bs.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 19 19 2 2
 config CONFIG 4 8007 8007 2 2
@@ -163,35 +163,35 @@ STRING 10C6-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\hid_custom1455int.X.production.o
-1B cinit CODE >3064:D:\Temp\sif8.s
-1B cinit CODE >3067:D:\Temp\sif8.s
-1B cinit CODE >3190:D:\Temp\sif8.s
-1C cinit CODE >3191:D:\Temp\sif8.s
-1D cinit CODE >3192:D:\Temp\sif8.s
-1E cinit CODE >3193:D:\Temp\sif8.s
-1F cinit CODE >3194:D:\Temp\sif8.s
-20 cinit CODE >3195:D:\Temp\sif8.s
-23 cinit CODE >3199:D:\Temp\sif8.s
-24 cinit CODE >3200:D:\Temp\sif8.s
-25 cinit CODE >3201:D:\Temp\sif8.s
-26 cinit CODE >3202:D:\Temp\sif8.s
-27 cinit CODE >3203:D:\Temp\sif8.s
-28 cinit CODE >3207:D:\Temp\sif8.s
-29 cinit CODE >3208:D:\Temp\sif8.s
-2A cinit CODE >3209:D:\Temp\sif8.s
-2B cinit CODE >3210:D:\Temp\sif8.s
-2C cinit CODE >3211:D:\Temp\sif8.s
-2D cinit CODE >3212:D:\Temp\sif8.s
-30 cinit CODE >3216:D:\Temp\sif8.s
-31 cinit CODE >3217:D:\Temp\sif8.s
-32 cinit CODE >3218:D:\Temp\sif8.s
-33 cinit CODE >3219:D:\Temp\sif8.s
-34 cinit CODE >3220:D:\Temp\sif8.s
-35 cinit CODE >3221:D:\Temp\sif8.s
-38 cinit CODE >3227:D:\Temp\sif8.s
-38 cinit CODE >3229:D:\Temp\sif8.s
-39 cinit CODE >3230:D:\Temp\sif8.s
-3A cinit CODE >3231:D:\Temp\sif8.s
+1B cinit CODE >3064:D:\Temp\s1bs.s
+1B cinit CODE >3067:D:\Temp\s1bs.s
+1B cinit CODE >3190:D:\Temp\s1bs.s
+1C cinit CODE >3191:D:\Temp\s1bs.s
+1D cinit CODE >3192:D:\Temp\s1bs.s
+1E cinit CODE >3193:D:\Temp\s1bs.s
+1F cinit CODE >3194:D:\Temp\s1bs.s
+20 cinit CODE >3195:D:\Temp\s1bs.s
+23 cinit CODE >3199:D:\Temp\s1bs.s
+24 cinit CODE >3200:D:\Temp\s1bs.s
+25 cinit CODE >3201:D:\Temp\s1bs.s
+26 cinit CODE >3202:D:\Temp\s1bs.s
+27 cinit CODE >3203:D:\Temp\s1bs.s
+28 cinit CODE >3207:D:\Temp\s1bs.s
+29 cinit CODE >3208:D:\Temp\s1bs.s
+2A cinit CODE >3209:D:\Temp\s1bs.s
+2B cinit CODE >3210:D:\Temp\s1bs.s
+2C cinit CODE >3211:D:\Temp\s1bs.s
+2D cinit CODE >3212:D:\Temp\s1bs.s
+30 cinit CODE >3216:D:\Temp\s1bs.s
+31 cinit CODE >3217:D:\Temp\s1bs.s
+32 cinit CODE >3218:D:\Temp\s1bs.s
+33 cinit CODE >3219:D:\Temp\s1bs.s
+34 cinit CODE >3220:D:\Temp\s1bs.s
+35 cinit CODE >3221:D:\Temp\s1bs.s
+38 cinit CODE >3227:D:\Temp\s1bs.s
+38 cinit CODE >3229:D:\Temp\s1bs.s
+39 cinit CODE >3230:D:\Temp\s1bs.s
+3A cinit CODE >3231:D:\Temp\s1bs.s
 4 intentry CODE >52:D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/interrupt_manager.c
 A intentry CODE >57:D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/interrupt_manager.c
@@ -891,19 +891,19 @@ CFC text7 CODE >136:D:\home\FTW-TT_50_USB\hid_custom1455int.X\app_device_custom_
 95E text1 CODE >56:D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/mcc.c
 961 text1 CODE >57:D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/mcc.c
 964 text1 CODE >58:D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/mcc.c
-93B maintext CODE >50:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
-93B maintext CODE >53:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
-93E maintext CODE >59:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
-93F maintext CODE >62:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
-940 maintext CODE >72:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
-935 clrtext CODE >3179:D:\Temp\sif8.s
-935 clrtext CODE >3180:D:\Temp\sif8.s
-936 clrtext CODE >3181:D:\Temp\sif8.s
-936 clrtext CODE >3182:D:\Temp\sif8.s
-937 clrtext CODE >3183:D:\Temp\sif8.s
-938 clrtext CODE >3184:D:\Temp\sif8.s
-939 clrtext CODE >3185:D:\Temp\sif8.s
-93A clrtext CODE >3186:D:\Temp\sif8.s
+93B maintext CODE >54:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+93B maintext CODE >57:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+93E maintext CODE >63:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+93F maintext CODE >66:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+940 maintext CODE >76:D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+935 clrtext CODE >3179:D:\Temp\s1bs.s
+935 clrtext CODE >3180:D:\Temp\s1bs.s
+936 clrtext CODE >3181:D:\Temp\s1bs.s
+936 clrtext CODE >3182:D:\Temp\s1bs.s
+937 clrtext CODE >3183:D:\Temp\s1bs.s
+938 clrtext CODE >3184:D:\Temp\s1bs.s
+939 clrtext CODE >3185:D:\Temp\s1bs.s
+93A clrtext CODE >3186:D:\Temp\s1bs.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -944,12 +944,12 @@ _UEIR E93 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 _UEP0 E98 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 _UEP1 E99 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
-___sp 0 0 STACK 2 stack D:\Temp\sif8.o
+___sp 0 0 STACK 2 stack D:\Temp\s1bs.o
 _main 1276 0 CODE 0 maintext dist/default/production\hid_custom1455int.X.production.o
 _pDst 1B5 0 BANK3 1 bssBANK3 dist/default/production\hid_custom1455int.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 __size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
-start 32 0 CODE 0 init D:\Temp\sif8.o
+start 32 0 CODE 0 init D:\Temp\s1bs.o
 __end_of_USBCheckHIDRequest D80 0 CODE 0 text29 dist/default/production\hid_custom1455int.X.production.o
 _USBTransferOnePacket D80 0 CODE 0 text9 dist/default/production\hid_custom1455int.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
@@ -965,12 +965,12 @@ _UEP0bits E98 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 __end_of_APP_DeviceCustomHIDInitialize 139C 0 CODE 0 text30 dist/default/production\hid_custom1455int.X.production.o
 _CtrlTrfData 48 0 ABS 1 - dist/default/production\hid_custom1455int.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
-intlevel0 0 0 ENTRY 0 functab D:\Temp\sif8.o
-intlevel1 0 0 ENTRY 0 functab D:\Temp\sif8.o
-intlevel2 0 0 ENTRY 0 functab D:\Temp\sif8.o
-intlevel3 0 0 ENTRY 0 functab D:\Temp\sif8.o
-intlevel4 0 0 ENTRY 0 functab D:\Temp\sif8.o
-intlevel5 0 0 ENTRY 0 functab D:\Temp\sif8.o
+intlevel0 0 0 ENTRY 0 functab D:\Temp\s1bs.o
+intlevel1 0 0 ENTRY 0 functab D:\Temp\s1bs.o
+intlevel2 0 0 ENTRY 0 functab D:\Temp\s1bs.o
+intlevel3 0 0 ENTRY 0 functab D:\Temp\s1bs.o
+intlevel4 0 0 ENTRY 0 functab D:\Temp\s1bs.o
+intlevel5 0 0 ENTRY 0 functab D:\Temp\s1bs.o
 i1USBDeviceInit@i_714 73 0 COMMON 1 cstackCOMMON dist/default/production\hid_custom1455int.X.production.o
 _pBDTEntryIn EC 0 BANK1 1 bssBANK1 dist/default/production\hid_custom1455int.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
@@ -1010,8 +1010,8 @@ _USBCtrlTrfRxService 858 0 CODE 0 text35 dist/default/production\hid_custom1455i
 USBStdFeatureReqHandler@pUEP 58 0 BANK0 1 cstackBANK0 dist/default/production\hid_custom1455int.X.production.o
 _USBInHandle 1A8 0 BANK3 1 bssBANK3 dist/default/production\hid_custom1455int.X.production.o
 USBCtrlTrfRxService@byteToRead 75 0 COMMON 1 cstackCOMMON dist/default/production\hid_custom1455int.X.production.o
-___stackhi 23EF 0 ABS 0 - D:\Temp\sif8.o
-___stacklo 2108 0 ABS 0 - D:\Temp\sif8.o
+___stackhi 23EF 0 ABS 0 - D:\Temp\s1bs.o
+___stacklo 2108 0 ABS 0 - D:\Temp\s1bs.o
 __size_of_USBDeviceInit 0 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 __end_of_USBCtrlTrfOutHandler 15DA 0 CODE 0 text34 dist/default/production\hid_custom1455int.X.production.o
 _USBBusIsSuspended 1B3 0 BANK3 1 bssBANK3 dist/default/production\hid_custom1455int.X.production.o
@@ -1039,7 +1039,7 @@ _USBStallHandler 14A8 0 CODE 0 text15 dist/default/production\hid_custom1455int.
 __size_of_APP_DeviceCustomHIDInitialize 0 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 __end_of_USBEnableEndpoint 14A8 0 CODE 0 text32 dist/default/production\hid_custom1455int.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
-___int_sp 0 0 STACK 2 stack D:\Temp\sif8.o
+___int_sp 0 0 STACK 2 stack D:\Temp\s1bs.o
 _UIEbits E92 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 _UIRbits E90 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 i1USBTransferOnePacket@data 71 0 COMMON 1 cstackCOMMON dist/default/production\hid_custom1455int.X.production.o
@@ -1235,7 +1235,7 @@ __size_of_USBStallHandler 0 0 ABS 0 - dist/default/production\hid_custom1455int.
 __end_of_USBCtrlTrfSetupHandler 1704 0 CODE 0 text19 dist/default/production\hid_custom1455int.X.production.o
 strcpy@d E3 0 BANK1 1 cstackBANK1 dist/default/production\hid_custom1455int.X.production.o
 strcpy@s E2 0 BANK1 1 cstackBANK1 dist/default/production\hid_custom1455int.X.production.o
-reset_vec 0 0 CODE 0 reset_vec D:\Temp\sif8.o
+reset_vec 0 0 CODE 0 reset_vec D:\Temp\s1bs.o
 _USBEnableEndpoint 145E 0 CODE 0 text32 dist/default/production\hid_custom1455int.X.production.o
 __size_ofi1_USBTransferOnePacket 0 0 ABS 0 - dist/default/production\hid_custom1455int.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

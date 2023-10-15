@@ -123,6 +123,14 @@ void APP_DeviceCustomHIDTasks()
         //We just received a packet of data from the USB host.
         //Check to make sure the endpoint/buffer is free before we modify the contents
         if (!HIDTxHandleBusy(USBInHandle)) {
+            
+            // =======================================================
+            // ==================== MEMO =============================
+            // (??)HID?????????????
+            // ????????????
+            // (?)0x00 ? ??????, 0x01 ? ??????
+            // ???????????????????
+            
             strcpy(ToSendDataBuffer, ReceivedDataBuffer);
             ToSendDataBuffer[0] += 1;
 

@@ -131,7 +131,7 @@ CONFIGURED_STATE 32
 [v _strcpy strcpy `(*.5uc  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"50 D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+"54 D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "52 D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -553,10 +553,10 @@ CONFIGURED_STATE 32
 [v _idle_rate idle_rate `uc  1 s 1 idle_rate ]
 "88
 [v _active_protocol active_protocol `uc  1 s 1 active_protocol ]
-"50 D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
+"54 D:\home\FTW-TT_50_USB\hid_custom1455int.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"74
+"78
 } 0
 "50 D:\home\FTW-TT_50_USB\hid_custom1455int.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]

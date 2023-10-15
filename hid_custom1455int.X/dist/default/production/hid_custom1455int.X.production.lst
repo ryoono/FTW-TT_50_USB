@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Sun Oct 15 23:38:17 2023
+                                                                                               Sun Oct 15 23:44:32 2023
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F1455
@@ -2181,7 +2181,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2167 ;;
   2168 ;; *************** function _main *****************
   2169 ;; Defined at:
-  2170 ;;		line 50 in file "main.c"
+  2170 ;;		line 54 in file "main.c"
   2171 ;; Parameters:    Size  Location     Type
   2172 ;;		None
   2173 ;; Auto vars:     Size  Location     Type
@@ -2222,19 +2222,19 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2203                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2204                           
   2205                           
-  2206                           ;main.c: 53:     SYSTEM_Initialize();
+  2206                           ;main.c: 57:     SYSTEM_Initialize();
   2207  093B  3189  2155  3189   	fcall	_SYSTEM_Initialize
   2208  093E                     l3733:
   2209                           
-  2210                           ;main.c: 59:     (INTCONbits.GIE = 1);
+  2210                           ;main.c: 63:     (INTCONbits.GIE = 1);
   2211  093E  178B               	bsf	11,7	;volatile
   2212  093F                     l3735:
   2213                           
-  2214                           ;main.c: 62:     (INTCONbits.PEIE = 1);
+  2214                           ;main.c: 66:     (INTCONbits.PEIE = 1);
   2215  093F  170B               	bsf	11,6	;volatile
   2216  0940                     l3737:
   2217                           
-  2218                           ;main.c: 71:     {;main.c: 72:         APP_DeviceCustomHIDTasks();
+  2218                           ;main.c: 75:     {;main.c: 76:         APP_DeviceCustomHIDTasks();
   2219  0940  318C  2495  3189   	fcall	_APP_DeviceCustomHIDTasks
   2220  0943  2940               	goto	l3737
   2221  0944  3180  2819         	ljmp	start
@@ -10825,7 +10825,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Sun Oct 15 23:38:17 2023
+Symbol Table                                                                                   Sun Oct 15 23:44:32 2023
 
                               _USB_SD_Ptr 10BA                             _USBDeviceInit 037A  
                       _USBCheckHIDRequest 0621      USER_USB_CALLBACK_EVENT_HANDLER@event 0050  

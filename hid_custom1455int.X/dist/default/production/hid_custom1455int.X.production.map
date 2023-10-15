@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\hid_custom1455int.X.production.sym \
   --cmf=dist/default/production\hid_custom1455int.X.production.cmf -z \
-  -Q16F1455 -oD:\Temp\sif8.2 --defsym=__MPLAB_BUILD=1 \
+  -Q16F1455 -oD:\Temp\s1bs.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/hid_custom1455int.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=02108h-023EFh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -30,7 +30,7 @@ Linker command line:
   -ASFR31=0F80h-0FEFh -ACONFIG=08007h-08008h -DCONFIG=2 \
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k D:\Temp\sif8.o \
+  -pcinit=CODE -pfunctab=ENTRY -k D:\Temp\s1bs.o \
   dist/default/production\hid_custom1455int.X.production.o 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16F1455
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-D:\Temp\sif8.o  end_init                             19       19        2        8       0
+D:\Temp\s1bs.o  end_init                             19       19        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
 dist/default/production\hid_custom1455int.X.production.o
@@ -983,7 +983,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 50 in file "main.c"
+		line 54 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

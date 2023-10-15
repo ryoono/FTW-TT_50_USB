@@ -576,7 +576,7 @@ clrtext 126A 1275 CODE 126A 0
 text2 1262 1269 CODE 1262 0
 %locals
 dist/default/production\hid_custom1455int.X.production.o
-D:\Temp\sif8.s
+D:\Temp\s1bs.s
 3064 1B 0 CODE 0
 3067 1B 0 CODE 0
 3190 1B 0 CODE 0
@@ -615,11 +615,11 @@ D:\Temp\sif8.s
 3185 939 0 CODE 0
 3186 93A 0 CODE 0
 main.c
-50 93B 0 CODE 0
-53 93B 0 CODE 0
-59 93E 0 CODE 0
-62 93F 0 CODE 0
-72 940 0 CODE 0
+54 93B 0 CODE 0
+57 93B 0 CODE 0
+63 93E 0 CODE 0
+66 93F 0 CODE 0
+76 940 0 CODE 0
 mcc_generated_files/mcc.c
 50 955 0 CODE 0
 53 955 0 CODE 0
