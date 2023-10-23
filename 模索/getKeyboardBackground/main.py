@@ -1,3 +1,10 @@
+# バックグラウンドでキー押下監視
+# エンターキー：1
+# エンターキー以外：2
+
+# 参考ページ
+# https://ameblo.jp/kabapython/entry-12786950485.html
+
 from pynput import keyboard
 
 def on_press(key):
