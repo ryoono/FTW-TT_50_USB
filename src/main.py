@@ -14,6 +14,7 @@ from pynput import keyboard
 # キーを押した時のイベント
 def on_press(key):
     try:
+        # at1.NonEnterKeyPush()
         # エンターキーの場合
         if key == keyboard.Key.enter:
             at1.EnterKeyPush()
@@ -31,9 +32,10 @@ def on_release(key):
 
 # Arduino用のクラスを作成する
 # 引数：ポート名
-# デバイス1つで動作させる場合は、at2を削除してください
-with sendKeyInfo.AutoTap("デバイス1のポート名") as at1:
+# デバイス1つで動aasd作させる場合は、at2を削除してください
+# with sendKeyInfo.sendKeyInfo("/dev/tty.usbmodem14101") as at1:
+at1 = sendKeyInfo.sendKeyInfo("/dev/tty.usbserial-1420")
 
     # Collect events until released
-    with keyboard.Listener( on_press=on_press, on_release=on_release) as listener:
-        listener.join() 
+with keyboard.Listener( on_press=on_press, on_release=on_release) as listener:
+    listener.join()
