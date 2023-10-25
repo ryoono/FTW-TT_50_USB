@@ -11,7 +11,7 @@ class sendKeyInfo():
     # ポート名を指定し、ポートとの通信を開始する
     def __init__( self, PortName):
         self.PortName = PortName
-        self.ActPort = serial.Serial( self.PortName, 9600)
+        self.ActPort = serial.Serial( self.PortName, 115200)
 
     # ポートを閉じる
     def __del__( self ):
