@@ -61,15 +61,21 @@ void loop() {
     }
   }
 
-  // バッファにエンターキーが入っていたら次のタイプはエンターキーを優先する
-  if( solOnBuff == 1 ){
-    solOnState = 3;
-    solOnBuff = 0;
-  }
-  // カウンタのインクリメントを防ぐために，
-  else if( (solOnBuff == 2) && (solOnState == 0) ){
-    solOnState = (solPinCnt++ % 2) + 1;
-    solOnBuff = 0;
+  // 全部のソレノイドが解放されている場合に実行
+  if( !solOnState ){
+    // エンターキーをセット
+    // エンターキーを連続で叩くことは無いと想定しているため，
+    // 連続で叩かれると最初の1回しかベルが鳴らない
+    if( solOnBuff == 1 ){
+      solOnState = 3;
+      solOnBuff = 0;
+    }
+    // 一般キーをセット
+    // 40msecのOFFタイムを減らすために，2つのソレノイドを交互に動作させている
+    else if( solOnBuff == 2 ){
+      solOnState = (solPinCnt++ % 2) + 1;
+      solOnBuff = 0;
+    }
   }
 
   // ソレノイドON時間タイマセット
