@@ -34,7 +34,7 @@ def on_release(key):
 # 引数：ポート名
 # デバイス1つで動aasd作させる場合は、at2を削除してください
 # with sendKeyInfo.sendKeyInfo("/dev/tty.usbmodem14101") as at1:
-at1 = sendKeyInfo.sendKeyInfo("/dev/tty.usbserial-1410")
+at1 = sendKeyInfo.sendKeyInfo("/dev/tty.usbserial-1420")
 
     # Collect events until released
 with keyboard.Listener( on_press=on_press, on_release=on_release) as listener:

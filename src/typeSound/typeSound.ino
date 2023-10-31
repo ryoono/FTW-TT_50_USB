@@ -3,13 +3,14 @@
 #define ENTER_KEY     '0'
 #define NON_ENTER_KEY '1'
 
-#define SOL_PIN_1     4
-#define SOL_PIN_2     5
-#define SOL_BELL_PIN  6
+#define SOL_PIN_1     5
+#define SOL_PIN_2     6
+#define SOL_BELL_PIN  4
 #define LED_PIN       13
 
-#define SOL_ON_TIME   40  // ソレノイドのON時間[msec]
-#define SOL_OFF_TIME  40  // ソレノイドのOFF時間[msec]
+#define SOL_ON_TIME         40  // ソレノイドのON時間(一般キー)[msec]
+#define SOL_ENTER_ON_TIME   35  // ソレノイドのON時間(エンターキー)[msec]
+#define SOL_OFF_TIME        40  // ソレノイドのOFF時間[msec]
 
 bool isLedOn;
 
@@ -29,17 +30,19 @@ void setup() {
   solOnRestTime = 0;
   solOnBuff = 0;
   
-  Serial.begin( 115200 );
   pinMode(    SOL_PIN_1, OUTPUT);
   pinMode(    SOL_PIN_2, OUTPUT);
   pinMode( SOL_BELL_PIN, OUTPUT);
   pinMode(      LED_PIN, OUTPUT);
+  pinMode(            1,  INPUT); // Vccが当たりそうだから入力ピンにしておく
 
   digitalWrite(    SOL_PIN_1, LOW);
   digitalWrite(    SOL_PIN_2, LOW);
   digitalWrite( SOL_BELL_PIN, LOW);
   digitalWrite(      LED_PIN, LOW);
-  isLedOn = false;
+  isLedOn = true;
+
+  Serial.begin( 115200 );
 }
 
 void loop() { 
@@ -67,22 +70,19 @@ void loop() {
     // エンターキーを連続で叩くことは無いと想定しているため，
     // 連続で叩かれると最初の1回しかベルが鳴らない
     if( solOnBuff == 1 ){
+      solOnRestTime = SOL_ENTER_ON_TIME;
       solOnState = 3;
       solOnBuff = 0;
+      isLedOn = !isLedOn;
     }
     // 一般キーをセット
     // 40msecのOFFタイムを減らすために，2つのソレノイドを交互に動作させている
     else if( solOnBuff == 2 ){
+      solOnRestTime = SOL_ON_TIME;
       solOnState = (solPinCnt++ % 2) + 1;
       solOnBuff = 0;
+      isLedOn = !isLedOn;
     }
-  }
-
-  // ソレノイドON時間タイマセット
-  // 初回1回目のみセット
-  if( (solOnStateBuf == 0) && (solOnState != 0) ){
-    solOnRestTime = SOL_ON_TIME;
-    isLedOn = !isLedOn;
   }
 
   if( solOnRestTime != 0 ){
