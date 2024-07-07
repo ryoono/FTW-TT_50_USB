@@ -21,16 +21,14 @@ int  swState; // SWの状態
 
 // 0:OFF, 1:SOL_PIN_1 ON, 2:SOL_PIN_2 ON, 3:SOL_BELL_PIN ON
 unsigned char solOnState;
-unsigned char solOnStateBuf;  // 前回値
 unsigned char solPinCnt;      // 一般キー用ソレノイド動作回数
 int solOnRestTime;            // ソレノイドON時間計測用タイマ
-// 0:無し, 1:一般キー, 2:エンターキー
+// 0:無し, 1:エンターキー, 2:一般キー
 unsigned char solOnBuff;
 
 void setup() {
 
   solOnState = 0;
-  solOnStateBuf = solOnState;
   solPinCnt = 0;
   solOnRestTime = 0;
   solOnBuff = 0;
@@ -130,9 +128,6 @@ void loop() {
     digitalWrite(    SOL_PIN_2, LOW);
     digitalWrite( SOL_BELL_PIN, LOW);
   }
-
-  // 前回値更新
-  solOnStateBuf = solOnState;
 
   // LED点灯(ソレノイド動作ごとに点滅)
   if( ledState ) digitalWrite( LED_PIN, HIGH);
