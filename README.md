@@ -67,4 +67,88 @@ flowchart TD
     node3 --> end2
     node4 --> end2
 ```
-### デバイス側
+
+### デバイス側  
+なぜ関数化しなかったのかが悔やまれるが、展示ギリギリだったので許してほしい。  
+
+```mermaid
+---
+title: Fig. Arduino側処理_フローチャート
+---
+
+flowchart TD
+    start1([開始])
+    node0[シリアル受信チェック]
+    switch0{受信有無}
+    switch1{打鍵タイプ}
+    switch2{受信キー}
+    switch2_1{受信キー}
+    node1[受信キーBuff = エンターキー]
+    switch3{受信キーBuff}
+    node2[受信キーBuff = 一般キー]
+    node2_1[受信キーBuff = 一般キー]
+    switch4{ソレノイド状態}
+    end1([終了])
+
+    start1 --> node0
+    node0 --> switch0
+    switch0 -- あり --> switch1
+    switch1 -- 英語(1) --> switch2
+    switch2 -- エンターキー('0') --> node1
+    switch2 -- 一般キー('1') --> switch3
+    switch3 -- なし(0) --> node2
+    switch1 -- 日本語(0) --> switch2_1
+    switch2_1 -- エンターキー('0') | 一般キー('1') --> node2_1
+    node1 --> switch4
+    node2 --> switch4
+    switch2 -- それ以外--> switch4
+    switch3 -- あり(!=0) --> switch4
+    node2_1 --> switch4
+    switch2_1 -- それ以外 --> switch4
+    switch0 -- なし --> switch4
+
+    switch10{受信キーBuff}
+    node10[ソレノイドON時間設定 = 35ms]
+    node11[ON中ソレノイドID = 3:エンターキー]
+    node12[受信キーBuff初期化]
+
+    node13[ソレノイドON時間設定 = 40ms]
+    switch11{一般キーONソレノイド前回値}
+    node14[ON中ソレノイドID = 1:一般キー]
+    node14[ON中ソレノイドID = 2:一般キー]
+    node15[受信キーBuff初期化]
+
+    switch4 -- ON中(0以外) --> switch10
+    switch10 -- エンターキー(1) --> node10
+    node10 --> node11
+    node11 --> node12
+    switch10 -- 一般キー(0) --> node13
+    node13 --> switch11
+    switch11 -- 1 --> node14
+    switch11 -- 2 --> node15
+
+    switch20{ソレノイドON時間設定}
+    switch21{ON中ソレノイドID}
+    node20[ソレノイド1のみON]
+    node21[ソレノイド2のみON]
+    node22[ソレノイド3のみON]
+    node23[ソレノイド全OFF]
+
+    node30[1ms停止]
+
+    node12 --> switch20
+    node14 --> switch20
+    node15 --> switch20
+    switch20 -- 0以外 --> switch21
+    switch21 -- 1:一般キー --> node20
+    switch21 -- 2:一般キー --> node21
+    switch21 -- 3:エンターキー --> node22
+    switch20 -- 0 --> node23
+
+    node20 --> node30
+    node21 --> node30
+    node22 --> node30
+    node23 --> node30
+
+    node30 --> end1
+```
