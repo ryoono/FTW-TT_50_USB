@@ -3,6 +3,8 @@
 <span style="color: red; ">F</span>ake <span style="color: red; ">T</span>ype <span style="color: red; ">W</span>riter - <span style="color: red; ">T</span>etora <span style="color: red; ">T</span>ech lab _ <span style="color: red; ">5</span>.<span style="color: red; ">0</span>v _ <span style="color: red; ">USB</span> drive  
 テトラ技研製 USB駆動 ニセタイプライター  
 
+![外観](./資料/PXL_20240114_082543204.TS_exported_4065~2.jpg)
+
 **[紹介動画](https://youtu.be/UQrdH8_pX44?si=VVSs2FK_6RHxstvM)**
 
 ## 背景  
