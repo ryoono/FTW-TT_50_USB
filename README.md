@@ -38,4 +38,33 @@ Arduino Microを使用して設計したが、電源回りが弱いようで5V�
 
 ## ソフトウェア設計  
 ### PC側  
+```mermaid
+---
+title: Fig. PC側処理_フローチャート
+---
+
+flowchart TD
+    start1([開始])
+    node0[Arduinoとの通信開始]
+    node1[キーイベント監視開始]
+    end1([終了])
+
+    start2([キーイベント発生])
+    node2[押下キー取得]
+    switch1{押下キー}
+    node3[Arduinoに'0'を送信]
+    node4[Arduinoに'1'を送信]
+    end2([終了])
+
+    start1 --> node0
+    node0 --> node1
+    node1 --> end1
+
+    start2 --> node2
+    node2 --> switch1
+    switch1 -- エンターキー --> node3
+    switch1 -- エンターキー以外 --> node4
+    node3 --> end2
+    node4 --> end2
+```
 ### デバイス側
